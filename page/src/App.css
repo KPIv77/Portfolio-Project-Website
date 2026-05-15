@@ -108,6 +108,7 @@ header {
   color: var(--muted);
   margin-bottom: 0.75rem;
   opacity: 0;
+  transform: translateY(20px)
 }
 
 .hero h1 {
