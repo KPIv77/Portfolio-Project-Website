@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./App.css";
+import GlobeDemo from "./GlobeDemo";
 
 // ─── ลงทะเบียน ScrollTrigger plugin ───
 gsap.registerPlugin(ScrollTrigger);
@@ -158,6 +159,10 @@ export default function App() {
 		<section className="about reveal" id="about">
 			<h2>About Me</h2>
 			<p>Telecommunication engineer passionate about building scalable network solutions.</p>
+			{/* ─── ขวา: demo placeholder ─── */}
+			<div>
+				<GlobeDemo />
+			</div>
 		</section>
 
 		<section className="read_receipt reveal" id="read_receipt">
@@ -252,7 +257,13 @@ export default function App() {
 
 		<section className="about reveal" id="tech-stack">
 			<h2>Tech Stack</h2>
-			<p>___</p>
+			<span className="badge">React</span>
+			<span className="badge">Javascript</span>
+			<span className="badge">TypeScript</span>
+			<span className="badge">Python</span>
+			<span className="badge">Supabase</span>	
+			<span className="badge">Vercel</span>
+		
 		</section>
 
 		<footer>

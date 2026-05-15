@@ -173,6 +173,7 @@ header {
   border-bottom: 1px solid var(--border);
   position: relative;
   z-index: 1;
+  height: 100vh;
 }
 
 .about h2 {
