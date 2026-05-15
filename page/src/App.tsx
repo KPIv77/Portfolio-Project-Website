@@ -196,17 +196,18 @@ export default function App() {
 		</section>
 
 		<section className="Gis reveal" id="gis">
-			<div className="project-layout project-layout--reverse">
+			<div className="project-layout">
 
 				{/* ─── ซ้าย: ข้อมูล project ─── */}
 				<div className="project-info">
 					<p className="section-label">Project 02</p>
-					<h2>GIS</h2>
+					<h2>Map GIS</h2>
 					<a href="" target="_blank" rel="noopener noreferrer" className="project-link">
 						View Project
 					</a>
 					<p className="project-desc">
-						details	
+						Each day, the team is assigned to visit different antenna sites to test signal quality. 
+						This project helps estimate the distance between sites, enabling smoother transitions to the next site.	
 					</p>
 
 					{/* tech badges */}
