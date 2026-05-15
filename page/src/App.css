@@ -1,0 +1,423 @@
+/* ─── CSS Variables: Space Theme ─── */
+:root {
+  --bg: #0b0f17;
+  --surface: #111827;
+  --muted: #9ca3af;
+  --border: rgba(255, 255, 255, 0.08);
+  --ink: #e5e7eb;
+  --accent: #4f46e5;
+  --accent-2: #22d3ee;
+}
+
+/* ─── Base ─── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at 20% 10%, #0f172a 0%, #0b0f17 50%, #05070d 100%);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ─── Star Field ─── */
+.stars {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 3s infinite alternate;
+}
+
+@keyframes twinkle {
+  from { opacity: 0.15; }
+  to   { opacity: 0.8;  }
+}
+
+/* ─── Header ─── */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 2.5rem;
+  z-index: 200;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.head ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.head ul a {
+  color: var(--muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+
+.head ul a:hover {
+  color: var(--ink);
+}
+
+/* ─── Hero ─── */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 2rem;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+  z-index: 1;
+}
+
+/* opacity: 0 ตั้งต้น — GSAP จะ fade up เข้ามาเอง */
+.hero-eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+  opacity: 0;
+}
+
+.hero h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(3.5rem, 9vw, 7rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--ink);
+  margin: 0 0 0.5rem;
+  opacity: 0;
+}
+
+.hero h1 span {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.hero p {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: var(--muted);
+  margin: 0.5rem 0 2rem;
+  opacity: 0;
+}
+
+.jump_to_project {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 10px 30px rgba(79, 70, 229, 0.3);
+  padding: 0.85rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.jump_to_project:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 14px 40px rgba(34, 211, 238, 0.3);
+}
+
+/* ─── Section Label ─── */
+.section-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+/* ─── About ─── */
+.about {
+  padding: 5rem 2.5rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  z-index: 1;
+}
+
+.about h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+
+.about p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ─── Project: Read Receipt ─── */
+.read_receipt {
+  padding: 5rem 2.5rem;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+}
+
+.read_receipt h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+
+.read_receipt p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* ─── Project: GIS ─── */
+.Gis {
+  padding: 5rem 2.5rem;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  z-index: 1;
+}
+
+.Gis h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+
+.Gis p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* ─── Sub Projects ─── */
+.sub-project {
+  padding: 5rem 2.5rem;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  z-index: 1;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.project-card {
+  background: rgba(17, 24, 39, 0.8);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.project-card:hover {
+  border-color: rgba(79, 70, 229, 0.5);
+  transform: translateY(-3px);
+}
+
+.project-card .card-tag {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  margin-bottom: 0.5rem;
+}
+
+.project-card h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 0.5rem;
+}
+
+.project-card p {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ─── Footer ─── */
+footer {
+  text-align: center;
+  padding: 1.25rem 2rem;
+  background: rgba(5, 7, 13, 0.8);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── Scroll Reveal ─── */
+/* ตั้งต้น opacity: 0 — GSAP ScrollTrigger จะ animate เข้ามาเมื่อ scroll ถึง */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+
+/* ─── Project Layout: 2 คอลัมน์ (info | demo) ─── */
+.project-layout {
+  display: grid;
+  /* ซ้าย fixed 420px, ขวา ขยายเต็มที่เหลือ */
+  grid-template-columns: 420px 1fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ─── ซ้าย: ข้อมูล project ─── */
+.project-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.project-info h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.project-desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.8;
+  /* reset opacity ที่ถูก .hero p ตั้งไว้ */
+  opacity: 1 !important;
+}
+
+/* tech badges */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.badge {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  padding: 0.3rem 0.75rem;
+  border-radius: 50px;
+  border: 1px solid rgba(79, 70, 229, 0.4);
+  color: var(--accent-2);
+  background: rgba(79, 70, 229, 0.08);
+}
+
+/* ─── ขวา: demo placeholder ─── */
+.project-demo {
+  /* กำหนด min-height ไว้รอ component */
+  min-height: 420px;
+  border-radius: 16px;
+  border: 1px dashed rgba(255, 255, 255, 0.12);
+  background: rgba(17, 24, 39, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.1);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+}
+
+/* ─── Responsive: stack เมื่อจอเล็ก ─── */
+@media (max-width: 768px) {
+  .project-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .project-demo {
+    min-height: 280px;
+  }
+}
+
+
+
+/* ─── Project Link Button ─── */
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+  padding: 0.65rem 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--accent-2);
+  border: 1px solid rgba(34, 211, 238, 0.35);
+  border-radius: 50px;
+  text-decoration: none;
+  background: rgba(34, 211, 238, 0.05);
+  transition: background 0.25s, border-color 0.25s, transform 0.25s;
+}
+
+.project-link::after {
+  /* arrow icon ด้วย CSS แทน icon library */
+  content: "↗";
+  font-size: 0.9rem;
+  transition: transform 0.2s;
+}
+
+.project-link:hover {
+  background: rgba(34, 211, 238, 0.12);
+  border-color: rgba(34, 211, 238, 0.6);
+  transform: translateY(-2px);
+}
+
+.project-link:hover::after {
+  /* arrow เด้งขึ้นขวาเมื่อ hover */
+  transform: translate(2px, -2px);
+}
