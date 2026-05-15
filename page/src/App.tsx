@@ -255,7 +255,7 @@ export default function App() {
 
 		</section>
 
-		<section className="about reveal" id="tech-stack">
+		<section className="about" id="tech-stack">
 			<h2>Tech Stack</h2>
 			<span className="badge">React</span>
 			<span className="badge">Javascript</span>
@@ -263,6 +263,13 @@ export default function App() {
 			<span className="badge">Python</span>
 			<span className="badge">Supabase</span>	
 			<span className="badge">Vercel</span>
+		
+		</section>
+
+		<section className="about" id="tech-stack">
+			<h2>Contact</h2>
+			<p>You can reach me at</p>
+	
 		
 		</section>
 
