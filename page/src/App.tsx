@@ -178,7 +178,7 @@ export default function App() {
 					<p className="project-desc">
 						A system for managing and summarizing daily personal finances,
 						allowing users to categorize and track spending in a structured way.
-						Built with React + TypeScript for the frontend and Supabase (SQL database)
+						Built with React + TypeScript for the frontend and Render + Supabase (SQL database)
 						for backend storage, enabling organized expense management and clear financial insights.
 					</p>
 
@@ -189,6 +189,7 @@ export default function App() {
 						<span className="badge">Supabase</span>
 						<span className="badge">SQL</span>
 						<span className="badge">Vercel</span>
+						<span className="badge">Render</span>
 					</div>
 				</div>
 
