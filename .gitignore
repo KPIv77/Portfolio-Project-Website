@@ -1,16 +1,17 @@
 # Logs
-port_page/logs
+page/logs
 *.log
-port_page/npm-debug.log*
-port_page/yarn-debug.log*
-port_page/yarn-error.log*
-port_page/pnpm-debug.log*
-port_page/lerna-debug.log*
+page/npm-debug.log*
+page/yarn-debug.log*
+page/yarn-error.log*
+page/pnpm-debug.log*
+page/lerna-debug.log*
+page/eslint.config.js
 
-port_page/node_modules
-port_page/dist
-port_page/dist-ssr
-port_page/*.local
+page/node_modules
+page/dist
+page/dist-ssr
+page/*.local
 
 # Editor directories and files
 .vscode/*
@@ -26,5 +27,5 @@ port_page/*.local
 .env.local
 
 
-port_page/src/assets/
-port_page/public/
+page/src/assets/
+page/public/
