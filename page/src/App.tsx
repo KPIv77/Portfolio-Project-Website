@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./App.css";
 import GlobeDemo from "./GlobeDemo";
+import ExpenseTracker from "./Income_and_Expenses.tsx";
 
 // ─── ลงทะเบียน ScrollTrigger plugin ───
 gsap.registerPlugin(ScrollTrigger);
@@ -138,6 +139,7 @@ function useScrollReveal() {
 export default function App() {
   // เรียก hook scroll reveal
   useScrollReveal();
+  
 
   return (
     <>
@@ -195,7 +197,9 @@ export default function App() {
 
 				{/* ─── ขวา: พื้นที่สำหรับ demo component ─── */}
 				<div className="project-demo">
-				{/* ใส่ component demo ทีหลัง */}
+					<div className="project-demo-inner">
+						<ExpenseTracker />
+					</div>
 				</div>
 
 			</div>

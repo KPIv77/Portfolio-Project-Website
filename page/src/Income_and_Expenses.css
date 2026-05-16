@@ -1,0 +1,437 @@
+/* ===================================================
+   ExpenseTracker.css
+   ระบบ CSS Variable ทั้งหมดนำหน้าด้วย --et-
+   เพื่อไม่ชนกับ CSS อื่นในโปรเจกต์
+   =================================================== */
+
+/* ── CSS Variables (theme) ─────────────────────────── */
+:root {
+  --et-primary:       #4f46e5;
+  --et-primary-light: #eef2ff;
+  --et-income:        #059669;
+  --et-income-light:  #d1fae5;
+  --et-expense:       #dc2626;
+  --et-expense-light: #fee2e2;
+  --et-surface:       #ffffff;
+  --et-bg:            #f8f7ff;
+  --et-border:        #e5e7eb;
+  --et-text:          #111827;
+  --et-text-muted:    #6b7280;
+  --et-radius:        12px;
+}
+
+/* ── Reset & Base ──────────────────────────────────── */
+.et-app * { box-sizing: border-box; }
+.et-app {
+  font-family: 'Sarabun', 'Segoe UI', sans-serif;
+  background: var(--et-bg);
+  color: var(--et-text);
+  font-size: 15px;
+  min-height: 100vh;
+}
+
+/* ── Topbar ─────────────────────────────────────────── */
+.et-topbar {
+  background: var(--et-surface);
+  border-bottom: 1px solid var(--et-border);
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 56px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.et-topbar-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--et-primary);
+  flex: 1;
+}
+
+/* ── Nav tabs ───────────────────────────────────────── */
+.et-nav-tabs { display: flex; gap: 4px; }
+.et-nav-tab {
+  padding: 6px 16px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--et-text-muted);
+  font-family: inherit;
+  transition: all 0.15s;
+}
+.et-nav-tab.active {
+  background: var(--et-primary-light);
+  color: var(--et-primary);
+  font-weight: 600;
+}
+.et-nav-tab:hover:not(.active) { background: #f3f4f6; }
+
+/* ── Page container ─────────────────────────────────── */
+.et-page {
+  padding: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── Summary grid (3 cards) ─────────────────────────── */
+.et-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.et-stat-card {
+  background: var(--et-surface);
+  border: 1px solid var(--et-border);
+  border-radius: var(--et-radius);
+  padding: 20px;
+}
+.et-stat-label {
+  font-size: 13px;
+  color: var(--et-text-muted);
+  margin-bottom: 8px;
+}
+.et-stat-value {
+  font-size: 26px;
+  font-weight: 700;
+}
+.et-stat-value.income  { color: var(--et-income); }
+.et-stat-value.expense { color: var(--et-expense); }
+.et-stat-sub {
+  font-size: 12px;
+  color: var(--et-text-muted);
+  margin-top: 4px;
+}
+
+/* ── Card ───────────────────────────────────────────── */
+.et-card {
+  background: var(--et-surface);
+  border: 1px solid var(--et-border);
+  border-radius: var(--et-radius);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.et-card-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+/* ── Form ───────────────────────────────────────────── */
+.et-form-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.et-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 140px;
+}
+.et-form-group label {
+  font-size: 13px;
+  color: var(--et-text-muted);
+  font-weight: 500;
+}
+.et-form-group input,
+.et-form-group select,
+.et-input-standalone {
+  padding: 9px 12px;
+  border: 1px solid var(--et-border);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--et-text);
+  background: var(--et-surface);
+  outline: none;
+  transition: border 0.15s;
+}
+.et-form-group input:focus,
+.et-form-group select:focus,
+.et-input-standalone:focus { border-color: var(--et-primary); }
+.et-input-standalone { flex: 1; }
+
+/* ── Buttons ─────────────────────────────────────────── */
+.et-btn {
+  padding: 9px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: 600;
+  transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+.et-btn-primary  { background: var(--et-primary);  color: white; }
+.et-btn-primary:hover { background: #4338ca; }
+.et-btn-ghost {
+  background: transparent;
+  color: var(--et-text-muted);
+  border: 1px solid var(--et-border);
+}
+.et-btn-ghost:hover { background: #f3f4f6; }
+.et-btn-danger  { background: #fee2e2; color: var(--et-expense); border: none; }
+.et-btn-danger:hover { background: #fecaca; }
+.et-btn-sm { padding: 5px 10px; font-size: 12px; }
+
+/* ── Select (standalone, outside form-group) ─────────── */
+.et-select-sm {
+  padding: 5px 10px;
+  border: 1px solid var(--et-border);
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: inherit;
+  outline: none;
+  background: var(--et-surface);
+  color: var(--et-text);
+}
+
+/* ── Type Toggle ─────────────────────────────────────── */
+.et-type-toggle {
+  display: flex;
+  border: 1px solid var(--et-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.et-type-btn {
+  flex: 1;
+  padding: 9px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: 600;
+  background: transparent;
+  transition: all 0.15s;
+  color: var(--et-text-muted);
+}
+.et-type-btn:not(.active):hover { background: #f3f4f6; }
+.et-type-btn.income.active  { background: var(--et-income);  color: white; }
+.et-type-btn.expense.active { background: var(--et-expense); color: white; }
+
+/* ── Filter bar ──────────────────────────────────────── */
+.et-filter-bar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.et-filter-bar input,
+.et-filter-bar select {
+  padding: 7px 12px;
+  border: 1px solid var(--et-border);
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: inherit;
+  outline: none;
+  background: var(--et-surface);
+  color: var(--et-text);
+}
+.et-filter-bar input:focus,
+.et-filter-bar select:focus { border-color: var(--et-primary); }
+.et-filter-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--et-text-muted);
+}
+
+/* ── Table ───────────────────────────────────────────── */
+.et-table-wrap { overflow-x: auto; }
+.et-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.et-table th {
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--et-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--et-border);
+  white-space: nowrap;
+}
+.et-table td {
+  padding: 12px 12px;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 14px;
+  vertical-align: middle;
+}
+.et-table tbody tr:hover td { background: #fafafa; }
+.et-table tbody tr:last-child td { border-bottom: none; }
+
+/* ── Badges ──────────────────────────────────────────── */
+.et-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.et-badge-income  { background: var(--et-income-light);  color: var(--et-income); }
+.et-badge-expense { background: var(--et-expense-light); color: var(--et-expense); }
+.et-badge-cat     { background: var(--et-primary-light); color: var(--et-primary); }
+
+/* ── Amount colors ───────────────────────────────────── */
+.et-amount-income  { color: var(--et-income);  font-weight: 600; }
+.et-amount-expense { color: var(--et-expense); font-weight: 600; }
+
+/* ── Chart layout ─────────────────────────────────────── */
+.et-chart-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.et-chart-wrap {
+  position: relative;
+  height: 260px;
+  width: 270px;
+}
+
+/* ── Group view ──────────────────────────────────────── */
+.et-group-section { margin-bottom: 16px; }
+.et-group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: #f3f4f6;
+  border-radius: 8px;
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: 14px;
+}
+.et-group-row {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  border-bottom: 1px solid #f3f4f6;
+  gap: 8px;
+}
+.et-group-row:last-child { border-bottom: none; }
+
+/* ── Category list (จัดการประเภท) ──────────────────── */
+.et-cat-list { display: flex; flex-direction: column; gap: 8px; }
+.et-cat-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid var(--et-border);
+  border-radius: 8px;
+  background: var(--et-surface);
+}
+.et-cat-name { flex: 1; font-size: 14px; }
+.et-color-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── Tab bar ──────────────────────────────────────────── */
+.et-tab-bar {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--et-border);
+  margin-bottom: 20px;
+}
+.et-tab {
+  padding: 8px 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--et-text-muted);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: all 0.15s;
+}
+.et-tab.active {
+  color: var(--et-primary);
+  border-bottom-color: var(--et-primary);
+  font-weight: 600;
+}
+
+/* ── Progress bar ─────────────────────────────────────── */
+.et-progress-bar {
+  height: 8px;
+  border-radius: 4px;
+  background: #e5e7eb;
+  overflow: hidden;
+}
+.et-progress-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+/* ── Modal ────────────────────────────────────────────── */
+.et-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.et-modal {
+  background: var(--et-surface);
+  border-radius: var(--et-radius);
+  padding: 24px;
+  width: 100%;
+  max-width: 480px;
+  border: 1px solid var(--et-border);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.et-modal-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.et-modal-footer {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+/* ── Empty state ──────────────────────────────────────── */
+.et-empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--et-text-muted);
+  font-size: 14px;
+}
+
+/* ── Responsive (< 640px) ─────────────────────────────── */
+@media (max-width: 640px) {
+  .et-summary-grid        { grid-template-columns: 1fr; }
+  .et-chart-grid          { grid-template-columns: 1fr; }
+  .et-form-row            { flex-direction: column; }
+  .et-topbar              { padding: 0 12px; }
+  .et-page                { padding: 12px; }
+  .et-nav-tab             { padding: 6px 10px; font-size: 13px; }
+  .et-stat-value          { font-size: 20px; }
+}
