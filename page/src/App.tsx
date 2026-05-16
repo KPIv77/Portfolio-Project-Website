@@ -140,7 +140,6 @@ export default function App() {
   // เรียก hook scroll reveal
   useScrollReveal();
   
-
   return (
     <>
 		<StarField />
@@ -271,7 +270,7 @@ export default function App() {
 		
 		</section>
 
-		<section className="about" id="tech-stack">
+		<section className="about" id="contact">
 			<h2>Contact</h2>
 			<p>You can reach me at</p>
 	
