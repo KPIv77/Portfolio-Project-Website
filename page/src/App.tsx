@@ -159,9 +159,15 @@ export default function App() {
 
 		<section className="about reveal" id="about">
 			<h2>About Me</h2>
-			<p>Telecommunication engineer passionate about building scalable network solutions.</p>
-			<div>
-				<GlobeDemo />
+			<div className="about-content">
+				<p>Telecommunications Engineer with experience in RF and network performance testing in the telecommunications field. 
+					Interested in web development and software development, 
+					with a strong interest in learning new technologies and continuously developing technical skills.
+				</p>
+			
+				<div className="about-globe">
+					<GlobeDemo />
+				</div>
 			</div>
 		</section>
 

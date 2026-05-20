@@ -170,11 +170,11 @@ header {
 /* ─── About ─── */
 .about {
   padding: 5rem 2.5rem;
-  text-align: center;
   border-bottom: 1px solid var(--border);
   position: relative;
   z-index: 1;
-  height: 50vh;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .about h2 {
@@ -185,33 +185,26 @@ header {
   margin-bottom: 1rem;
 }
 
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
 .about p {
   font-size: 0.95rem;
   color: var(--muted);
   max-width: 480px;
   line-height: 1.7;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  justify-content: center;
   text-align: left;
-  margin: 0 auto;
+  flex: 1;
 }
 
-.about .contact-link {
-  color: var(--ink);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.2s;
-}
-.about .contact-link:hover {
-  color: var(--accent-2);
-}
-.about .contact-icon {
-  color: var(--ink);
-  font-weight: 600;
-  font-size: 1.1em;
-  margin-right: 0.3em;
+.about-globe {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ─── Tech Stack section ─── */
