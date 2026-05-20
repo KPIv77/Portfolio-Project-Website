@@ -719,7 +719,7 @@ export default function ExpenseTracker() {
                 <button className="et-btn et-btn-primary" onClick={addCategory}>+ Add</button>
               </div>
               <div className="et-cat-list">
-                {(catTab === "income" ? incomeCats : expenseCats).map((cat, i) => (
+                {(catTab === "income" ? incomeCats : expenseCats).map((cat) => (
                   <div key={cat} className="et-cat-item">
                     {/*<span className="et-color-dot" style={{ background: CHART_COLORS[i % CHART_COLORS.length] }} />*/}
                     <span className="et-cat-name">{cat}</span>
