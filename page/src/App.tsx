@@ -241,17 +241,31 @@ export default function App() {
 			<div className="project-cards">
 
 				<div className="project-card">
-					<div className="card-tag">Utility</div>
-					<h3>Sub Project A</h3>
-					<p>Short description of sub project A.</p>
-					</div>
+				
+					<div className="card-tag">Gitgub Repositories</div>
+					<h3>Convert excel to .DB</h3>
+					<p>Converted large Excel datasets 
+						into a SQLite database and optimized data querying 
+						with SQLite3 to reduce system resource consumption 
+						and improve performance when processing large files.
+					</p>
+					<a 
+						href="https://github.com/KPIv77/excel_readDB" 
+						target="_blank" 
+						rel="noopener noreferrer"
+						className="project-link"
+						>
+						View Project →
+					</a>
+				</div>
 
-					<div className="project-card">
+				<div className="project-card">
 					<div className="card-tag">Tool</div>
 					<h3>Sub Project B</h3>
 					<p>Short description of sub project B.</p>
-					</div>
-					<div className="project-card">
+				</div>
+
+				<div className="project-card">
 					<div className="card-tag">Script</div>
 					<h3>Sub Project C</h3>
 					<p>Short description of sub project C.</p>
