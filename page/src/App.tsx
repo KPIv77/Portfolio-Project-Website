@@ -113,17 +113,17 @@ function useScrollReveal() {
     elements.forEach((el) => {
       gsap.fromTo(
         el,
-        { opacity: 0, y: 50 },  // เริ่มจากโปร่งใส + เลื่อนลง 50px
+        { opacity: 0, y: 50 },  
         {
           opacity: 1,
           y: 0,
           duration: 0.9,
           ease: "power3.out",
           scrollTrigger: {
-            trigger: el,         // element ไหนที่ trigger
-            start: "top 85%",    // เริ่ม animate เมื่อ top ของ element ถึง 85% ของ viewport
+            trigger: el,         
+            start: "top 85%",    
             end: "top 40%",
-            toggleActions: "play none none none", // play เมื่อเข้า, ไม่ reverse เมื่อออก
+            toggleActions: "play none none none", 
           },
         }
       );
@@ -157,11 +157,9 @@ export default function App() {
 
 		<Hero />
 
-		{/* ─── เพิ่ม class reveal ทุก section ที่ต้องการ fade in ─── */}
 		<section className="about reveal" id="about">
 			<h2>About Me</h2>
 			<p>Telecommunication engineer passionate about building scalable network solutions.</p>
-			{/* ─── ขวา: demo placeholder ─── */}
 			<div>
 				<GlobeDemo />
 			</div>
@@ -170,7 +168,6 @@ export default function App() {
 		<section className="read_receipt reveal" id="read_receipt">
 			<div className="project-layout">
 
-				{/* ─── ซ้าย: ข้อมูล project ─── */}
 				<div className="project-info">
 					<p className="section-label">Project 01</p>
 					<h2>Income and Expenses</h2>
@@ -195,7 +192,6 @@ export default function App() {
 					</div>
 				</div>
 
-				{/* ─── ขวา: พื้นที่สำหรับ demo component ─── */}
 				<div className="project-demo">
 					<div className="project-demo-inner">
 						<ExpenseTracker />
@@ -208,7 +204,6 @@ export default function App() {
 		<section className="Gis reveal" id="gis">
 			<div className="project-layout">
 
-				{/* ─── ซ้าย: ข้อมูล project ─── */}
 				<div className="project-info">
 					<p className="section-label">Project 02</p>
 					<h2>Map GIS</h2>
@@ -228,7 +223,6 @@ export default function App() {
 					</div>
 				</div>
 
-				{/* ─── ขวา: พื้นที่สำหรับ demo component ─── */}
 				<div className="project-demo">
 					<MapView />
 				</div>
@@ -260,22 +254,56 @@ export default function App() {
 
 		</section>
 
-		<section className="about" id="tech-stack">
-			<h2>Tech Stack</h2>
-			<span className="badge">React</span>
-			<span className="badge">Javascript</span>
-			<span className="badge">TypeScript</span>
-			<span className="badge">Python</span>
-			<span className="badge">Supabase</span>	
-			<span className="badge">Vercel</span>
-		
+		{/* ─── Tech Stack ─── */}
+		<section className="tech-stack" id="tech-stack">
+		<span className="section-label">Skills & Tools</span>
+		<h2>Tech Stack</h2>
+		<p className="tech-stack-desc">Technologies I work with regularly.</p>
+
+		<div className="tech-grid">
+			{[
+			{ icon: "ti-brand-react",      name: "React",      cat: "Frontend" },
+			{ icon: "ti-brand-javascript", name: "JavaScript", cat: "Language" },
+			{ icon: "ti-code",             name: "TypeScript", cat: "Language" },
+			{ icon: "ti-brand-python",     name: "Python",     cat: "Language" },
+			{ icon: "ti-database",         name: "Supabase",   cat: "Database" },
+			{ icon: "ti-brand-vercel",     name: "Vercel",     cat: "Deploy"   },
+			].map(({ icon, name, cat }) => (
+			<div className="tech-card" key={name}>
+				<i className={`ti ${icon}`} aria-hidden="true" />
+				<span className="tech-name">{name}</span>
+				<span className="tech-cat">{cat}</span>
+			</div>
+			))}
+		</div>
 		</section>
 
-		<section className="about" id="contact">
-			<h2>Contact</h2>
-			<p>You can reach me at</p>
-	
-		
+		{/* ─── Contact ─── */}
+		<section className="contact-section" id="contact">
+		<h2>Contact</h2>
+		<p className="contact-sub">Feel free to reach out anytime.</p>
+
+		{/* contact link cards */}
+		<div className="contact-cards">
+			<a className="contact-row" href="mailto:kitisakpholor@gmail.com">
+			<i className="ti ti-mail" aria-hidden="true" />
+			<div>
+				<span className="contact-row-label">Email</span>
+				<span className="contact-row-value">kitisakpholor@gmail.com</span>
+			</div>
+			<i className="ti ti-arrow-up-right contact-row-arrow" aria-hidden="true" />
+			</a>
+
+			<a className="contact-row" href="https://github.com/KPIv77"
+			target="_blank" rel="noopener noreferrer">
+			<i className="ti ti-brand-github" aria-hidden="true" />
+			<div>
+				<span className="contact-row-label">GitHub</span>
+				<span className="contact-row-value">KPIv77</span>
+			</div>
+			<i className="ti ti-arrow-up-right contact-row-arrow" aria-hidden="true" />
+			</a>
+		</div>
 		</section>
 
 		<footer>

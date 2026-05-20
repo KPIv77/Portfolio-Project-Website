@@ -163,7 +163,7 @@ header {
   font-size: 0.7rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-2);
   margin-bottom: 1rem;
 }
 
@@ -174,6 +174,7 @@ header {
   border-bottom: 1px solid var(--border);
   position: relative;
   z-index: 1;
+  height: 50vh;
 }
 
 .about h2 {
@@ -188,9 +189,190 @@ header {
   font-size: 0.95rem;
   color: var(--muted);
   max-width: 480px;
-  margin: 0 auto;
   line-height: 1.7;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  text-align: left;
+  margin: 0 auto;
 }
+
+.about .contact-link {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.about .contact-link:hover {
+  color: var(--accent-2);
+}
+.about .contact-icon {
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 1.1em;
+  margin-right: 0.3em;
+}
+
+/* ─── Tech Stack section ─── */
+.tech-stack {
+  padding: 5rem 2.5rem;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  z-index: 1;
+  height: 80vh;
+  max-width: 1200px;  /* กำหนดความกว้างสูงสุด */
+  margin: 0 auto;
+}
+
+.tech-stack h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+}
+
+.tech-stack-desc {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+/* grid ปรับจำนวนคอลัมน์อัตโนมัติตามขนาดหน้าจอ */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.75rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* card แต่ละ tech item */
+.tech-card {
+  background: rgba(17, 24, 39, 0.8);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.1rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.tech-card:hover {
+  border-color: rgba(79, 70, 229, 0.5);
+  transform: translateY(-3px);
+}
+
+/* icon ขนาดใหญ่จาก Tabler */
+.tech-card .ti {
+  font-size: 24px;
+  color: var(--accent-2);
+}
+
+.tech-name {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: 0.04em;
+}
+
+.tech-cat {
+  font-size: 0.65rem;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ─── Contact section ─── */
+.contact-section {
+  padding: 5rem 2.5rem;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  z-index: 1;
+  height: 80vh;
+  max-width: 1200px;  /* กำหนดความกว้างสูงสุด */
+  margin: 0 auto;
+}
+
+.contact-section h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+}
+
+.contact-sub {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+/* wrapper ของ contact rows */
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 420px;
+  margin: 0 auto; /* เพิ่ม */
+}
+
+/* แต่ละ contact row */
+.contact-row {
+  background: rgba(17, 24, 39, 0.8);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.contact-row:hover {
+  border-color: rgba(34, 211, 238, 0.5);
+  transform: translateX(4px); /* เลื่อนขวาเมื่อ hover */
+}
+
+/* icon ด้านซ้ายของ row */
+.contact-row > .ti:first-child {
+  font-size: 22px;
+  color: var(--accent-2);
+  flex-shrink: 0;
+}
+
+.contact-row-label {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.contact-row-value {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* arrow icon ชิดขวา */
+.contact-row-arrow {
+  margin-left: auto;
+  font-size: 16px;
+  color: var(--muted);
+  transition: color 0.2s, transform 0.2s;
+}
+
+.contact-row:hover .contact-row-arrow {
+  color: var(--accent-2);
+  transform: translate(2px, -2px); /* เด้งขึ้นขวาเมื่อ hover */
+}
+
 
 /* ─── Project: Read Receipt ─── */
 .read_receipt {
@@ -242,6 +424,8 @@ header {
   border-bottom: 1px solid var(--border);
   position: relative;
   z-index: 1;
+  max-width: 1200px;  /* กำหนดความกว้างสูงสุด */
+  margin: 0 auto;
 }
 
 .project-cards {
