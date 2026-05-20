@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./App.css";
 import GlobeDemo from "./GlobeDemo";
 import ExpenseTracker from "./Income_and_Expenses.tsx";
+import MapView from "./demo_map";
 
 // ─── ลงทะเบียน ScrollTrigger plugin ───
 gsap.registerPlugin(ScrollTrigger);
@@ -211,7 +212,7 @@ export default function App() {
 				<div className="project-info">
 					<p className="section-label">Project 02</p>
 					<h2>Map GIS</h2>
-					<a href="" target="_blank" rel="noopener noreferrer" className="project-link">
+					<a href="https://mapify-gisz.vercel.app/" target="_blank" rel="noopener noreferrer" className="project-link">
 						View Project
 					</a>
 					<p className="project-desc">
@@ -229,7 +230,7 @@ export default function App() {
 
 				{/* ─── ขวา: พื้นที่สำหรับ demo component ─── */}
 				<div className="project-demo">
-				{/* ใส่ component demo ทีหลัง */}
+					<MapView />
 				</div>
 
 			</div>
