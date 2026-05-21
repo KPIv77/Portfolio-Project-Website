@@ -259,13 +259,25 @@ export default function App() {
 						View Project
 					</a>
 				</div>
-				{/*
+				
 				<div className="project-card">
-					<div className="card-tag">Tool</div>
-					<h3>Sub Project B</h3>
-					<p>Short description of sub project B.</p>
+					<div className="card-tag">Gitgub Repositories</div>
+					<h3>OCR-receipt</h3>
+					<p>classify bank receipts, perform OCR text extraction, 
+						and store extracted data into a database.
+					</p>
+					
+					<a 
+						href="https://github.com/KPIv77/OCR-receipt" 
+						target="_blank" 
+						rel="noopener noreferrer"
+						className="project-link"
+						>
+						View Project
+					</a>
 				</div>
 
+				{/*
 				<div className="project-card">
 					<div className="card-tag">Script</div>
 					<h3>Sub Project C</h3>
