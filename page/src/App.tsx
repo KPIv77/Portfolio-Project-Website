@@ -255,7 +255,7 @@ export default function App() {
 						rel="noopener noreferrer"
 						className="project-link"
 						>
-						View Project →
+						View Project
 					</a>
 				</div>
 				{/*
