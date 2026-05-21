@@ -258,7 +258,7 @@ export default function App() {
 						View Project →
 					</a>
 				</div>
-
+				{/*
 				<div className="project-card">
 					<div className="card-tag">Tool</div>
 					<h3>Sub Project B</h3>
@@ -270,6 +270,8 @@ export default function App() {
 					<h3>Sub Project C</h3>
 					<p>Short description of sub project C.</p>
 				</div>
+
+				*/}
 			</div>
 
 		</section>
