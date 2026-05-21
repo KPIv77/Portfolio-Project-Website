@@ -195,6 +195,7 @@ export default function App() {
 						<span className="badge">SQL</span>
 						<span className="badge">Vercel</span>
 						<span className="badge">Render</span>
+						<span className="badge">Express</span>
 					</div>
 				</div>
 
