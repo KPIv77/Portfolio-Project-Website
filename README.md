@@ -9,8 +9,9 @@ It serves as both an online resume and a space to present the work I’ve done i
 
 | Category | Technologies |
 |-----------|---------------|
-| **Frontend** | HTML/CSS/JavaScript |
+| **Frontend** | HTML/CSS/JavaScript/Typescript |
 | **Languages** | Python/Node.js |
+| **Database** | PostgreSQL/Supabase  |
 | **Version Control** | Git & GitHub |
 
 ---
