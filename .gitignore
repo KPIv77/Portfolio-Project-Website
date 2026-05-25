@@ -28,3 +28,7 @@ page/*.local
 
 
 page/src/assets/
+
+index.html
+main_style.css
+main_index.js
