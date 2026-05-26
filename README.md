@@ -5,7 +5,7 @@ It serves as both an online resume and a space to present the work I’ve done i
 
 
 
-## 🧰 Tech Stack
+## ⚙️ Tech Stack
 
 | Category | Technologies |
 |-----------|---------------|
