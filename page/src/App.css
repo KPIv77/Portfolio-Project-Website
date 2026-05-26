@@ -436,6 +436,10 @@ header {
   transition: border-color 0.2s, transform 0.2s;
 }
 
+.project-card span {
+  margin-top: 11px;
+}
+
 .project-card:hover {
   border-color: rgba(79, 70, 229, 0.5);
   transform: translateY(-3px);

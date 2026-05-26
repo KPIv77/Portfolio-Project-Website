@@ -50,7 +50,7 @@ function Hero() {
     const section = sectionRef.current;
     if (!section) return;
 
-    // fade up ตอน mount
+    // fade up 
     gsap.fromTo(
       [eyebrowRef.current, nameRef.current, subtitleRef.current],
       { opacity: 0, y: 30 },
@@ -258,23 +258,39 @@ export default function App() {
 						>
 						View Project
 					</a>
+					<div className="project-tags">
+						<span className="badge">Python</span>
+						<span className="badge">Jupyter notebook</span>
+						<span className="badge">Docker</span>
+						<span className="badge">SQL</span>
+					</div>
 				</div>
 				
 				<div className="project-card">
-					<div className="card-tag">Gitgub Repositories</div>
+					<div className="card-tag">Vercel deployment</div>
 					<h3>OCR-receipt</h3>
 					<p>classify bank receipts, perform OCR text extraction, 
-						and store extracted data into a database.
+						and store extracted data into a database.<br></br>
+						-Varcel deployment React + TypeScript.<br></br>
+						-Hugging Face run model ML ocr and read receipt model (for read receipt)<br></br>
+						-restAPI crud data base. 
 					</p>
-					
 					<a 
-						href="https://github.com/KPIv77/OCR-receipt" 
+						href="https://ocr-receipt-ecru.vercel.app/" 
 						target="_blank" 
 						rel="noopener noreferrer"
 						className="project-link"
 						>
 						View Project
 					</a>
+					<div className="project-tags">
+						<span className="badge">React</span>
+						<span className="badge">TypeScript</span>
+						<span className="badge">Vercel</span>
+						<span className="badge">Python</span>
+						<span className="badge">Hugging Face</span>
+						<span className="badge">Docker</span>
+					</div>
 				</div>
 
 				{/*
