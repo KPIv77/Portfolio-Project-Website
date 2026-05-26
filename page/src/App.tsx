@@ -177,7 +177,7 @@ export default function App() {
 				<div className="project-info">
 					<p className="section-label">Project 01</p>
 					<h2>Income and Expenses</h2>
-					<a href="https://read-receipt-vercel.vercel.app/" target="_blank" rel="noopener noreferrer" className="project-link">
+					<a href="https://revenue-noteapp.vercel.app/" target="_blank" rel="noopener noreferrer" className="project-link">
 						View Project
 					</a>
 					<p className="project-desc">
