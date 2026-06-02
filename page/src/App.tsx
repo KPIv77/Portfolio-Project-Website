@@ -2,9 +2,9 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./App.css";
-import GlobeDemo from "./GlobeDemo";
-import ExpenseTracker from "./Income_and_Expenses.tsx";
-import MapView from "./demo_map";
+import GlobeDemo from "./component/GlobeDemo.tsx";
+import ExpenseTracker from "./component/Income_and_Expenses.tsx";
+import MapView from "./component/demo_map.tsx";
 
 // ─── ลงทะเบียน ScrollTrigger plugin ───
 gsap.registerPlugin(ScrollTrigger);
